@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- CSS -->
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
+  <link href='http://fonts.googleapis.com/css?family=Ubuntu:300,700,400' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <link href="css/style.css" rel="stylesheet" />
+
+  <!-- SCRIPTS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.14/angular.min.js"></script>
+  <script src="js/app.js"></script>
+
+
+</head>
+
+<body>
+  <div ng-app="CalculatorApp" ng-controller="MainController" class="calculator container">
+  
+		<div class="row">
+			<div class="screen well col-sm-12 text-right">{{screen}}</div>
+		</div>
+		<div class="row">
+			<button class="btn btn-danger col-sm-3 clear" ng-click="clear()">Clear</button>
+		</div>
+		<div class="row">
+			<button class="btn col-sm-3" ng-click="append('7')">7</button>
+			<button class="btn col-sm-3" ng-click="append('8')">8</button>
+			<button class="btn col-sm-3" ng-click="append('9')">9</button>
+			<button class="btn btn-warning col-sm-3" ng-click="setOp('div')">/</button>
+		</div>
+		<div class="row">
+			<button class="btn col-sm-3" ng-click="append('4')">4</button>
+			<button class="btn col-sm-3" ng-click="append('5')">5</button>
+			<button class="btn col-sm-3" ng-click="append('6')">6</button>
+			<button class="btn btn-warning col-sm-3" ng-click="setOp('mul')">x</button>
+		</div>
+		<div class="row">
+			<button class="btn col-sm-3" ng-click="append('1')">1</button>
+			<button class="btn col-sm-3" ng-click="append('2')">2</button>
+			<button class="btn col-sm-3" ng-click="append('3')">3</button>
+			<button class="btn btn-warning col-sm-3" ng-click="setOp('sub')">-</button>
+		</div>
+		<div class="row">
+			<button class="btn col-sm-3" ng-click="append('0')">0</button>
+			<button class="btn col-sm-3" ng-click="append('.')">.</button>
+			<button class="btn btn-success col-sm-3" ng-click="equals()">=</button>
+			<button class="btn btn-warning col-sm-3" ng-click="setOp('add')">+</button>
+		</div>
+		<div class="col-sm-3">P1: {{p1}}</div>
+		<div class="col-sm-3">Old OP: {{oldOp}}</div>
+		<div class="col-sm-3">New OP: {{op}}</div>
+				
+</div>  
+
+</body>
+
+</html>

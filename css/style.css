@@ -1,0 +1,26 @@
+body {
+  background-color:#ccc;
+  font-size: 16px;
+}
+
+.calculator {
+  margin: 20px auto;
+  max-width: 400px;
+  min-width: 200px;
+  width: 40%;
+  background-color:#39819a;
+  padding:30px;
+}
+
+.row {
+	margin-top:10px;
+}
+
+.screen {
+  background-color: #eee;
+  height: 55px;
+}
+
+.clear, .neg {
+  margin-bottom: 20px;
+}
